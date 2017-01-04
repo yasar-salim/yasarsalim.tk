@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body ng-app="todo" ng-controller="myctrl">
+
+        <h1>Project TODO using Angular 1</h1>
+
+        <form ng-submit="additem()">
+            <input type="text" placeholder="enter item" ng-model="data.item" autofocus>
+            <button type="submit">ADD</button>
+        </form>
+
+        <ul>
+            <li ng-repeat="x in list" ng-class="{'strike-text':x.show}" ng-click="striketext($index)">{{x.name}}</li>
+        </ul>
+
+        <script src="./angular.min.js"></script>
+        <script src="./app.js"></script>
+    </body>
+</html>
